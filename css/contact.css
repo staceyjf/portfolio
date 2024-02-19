@@ -4,7 +4,8 @@ main {
 }
 
 .contact-form {
-  margin-top: 20px;
+  width: 50vh;
+  margin-top: 20px;;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-gap: 15px;
@@ -15,7 +16,7 @@ main {
   font-weight: bold;
 }
 
-button {
+.purple-button {
   color: white;
   font-weight: bold;
   background-color: #8a1c7c;
