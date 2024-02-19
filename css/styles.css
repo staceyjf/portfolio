@@ -9,6 +9,12 @@ body {
   justify-content: space-between;
   align-items: stretch;
   height: 50px;
+  background-color: #1f0322;
+}
+
+#company-logo-container > img {
+  width: 100px;
+  height: auto;
 }
 
 #top-nav ul {
@@ -23,7 +29,7 @@ body {
 }
 
 #top-nav a {
-  color: black;
+  color: white;
   font-family: "Inter", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
@@ -51,8 +57,9 @@ header {
   height: 100vh;
 }
 
-#name-container {
+.word-color-highlight {
   color: #f7ece1;
   font-weight: 900;
   text-transform: uppercase;
 }
+

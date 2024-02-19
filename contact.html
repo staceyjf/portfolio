@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/images/logo_small.svg" type="image/x-icon">
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="/images/logo.svg" type="image/x-icon">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/contact.css">
   <title>Contact me</title>
 </head>
 <body>
 
   <nav id="top-nav">
-    <div>
-      <img src="/images/logo_small.svg" alt="logo">
+    <div id="company-logo-container">
+      <img src="/images/logo.svg" alt="logo">
     </div>
     <ul>
       <li> 
       <a href="home.html">Home</a>
       </li>
+      <!-- TODO: replace with JS -->
       <li class="active">
         <a href="contact.html">Contact</a>
       </li>
@@ -24,9 +26,27 @@
   </nav>
 
   <header>
-    <h1>Let's stay in touch</h1>
+    <h1>Let's stay in <span class="word-color-highlight">touch</span></h1>
     <p>Drop me a line or see what I'm currently up to</p>
   </header>
+
+  <main>
+    <!-- Contact form -->
+    <div class="contact-form">
+      <label for="fullName">Full Name:</label>
+      <input type="text" name="fullName" id="fullName">
+
+      <label for="email">Email:</label>
+      <input type="text" name="email" id="email">
+
+      <label for="message">Message:</label>
+      <textarea name="message" id="message" cols="20" rows="3">Leave your message here.</textarea>
+
+      <button>Clear</button>
+      <button>Submit</button>
+    </div>
+
+  </main>
   
 </body>
 </html>
