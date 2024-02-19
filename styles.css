@@ -37,10 +37,14 @@
 
 header {
   background-color: #cac4ce;
-  height: 100vh;
-  padding: 10px;
+  
+  padding: 20px;
   margin: 0;
   font-family: "Inter", sans-serif;
+}
+
+#main-header {
+  height: 100vh;
 }
 
 #name-container {
