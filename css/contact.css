@@ -20,16 +20,23 @@ main {
 .purple-button {
   color: white;
   font-weight: bold;
-  background-color: #8a1c7c;
+  background-color: #f0bcd4;
+  border: 1px solid ;
   border-radius: 5px;
   padding: 5px;
+}
+
+.purple-button:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
 }
 
 /* Footer */
 footer {
   flex: 1;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin-top: 20px;
   background-color: #8a1c7c;
   color: white;
@@ -39,4 +46,8 @@ footer {
 footer > p {
   text-transform: uppercase;
   font-weight: bold;
+}
+
+dt {
+  font-weight: bolder;
 }

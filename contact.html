@@ -53,8 +53,8 @@
    <!-- Footer -->
    <footer>
     <p>See what others have said</p>
+    <br>
     <dl id="currentMessages">
-
     </dl>
    </footer>
 
@@ -89,7 +89,48 @@
         'messages',
         JSON.stringify(currentMessages)
       )
+
+      // render the message
+      renderMessages()
+
+      // clear form
+      clearForm();
     }
+
+    function clearForm() {
+      // clear the form
+      const form = document.querySelector('.contact-form');
+      form.reset();
+   }
+
+    function renderMessages() {
+      // check for messages in message list
+      let currentMessages = [];
+
+      if (window.sessionStorage.getItem('messages')) {
+        currentMessages = JSON.parse(window.sessionStorage.getItem('messages'))
+      }
+
+      let listItems = [];
+      let listNumber = 1;
+
+      // add form message to current messages
+      currentMessages.forEach(message => {
+        let listItem = "";
+        listItem += `<dt>${listNumber}.  ${message.fullName} (${message.email})</dt>`;
+        listItem += `<dd>Message: ${message.message}</dd>`;
+        listItem += `<br>`;
+        listItems.push(listItem);
+        listNumber++;
+      })
+
+      // render message list
+      let descriptList = document.getElementById('currentMessages');
+      descriptList.innerHTML = listItems.join('');
+
+    }
+
+    renderMessages()
   </script>
   
 </body>
