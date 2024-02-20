@@ -10,6 +10,7 @@
 </head>
 <body>
 
+  <!-- Nav Bar -->
   <nav id="top-nav">
     <div id="company-logo-container">
       <img src="/images/logo.svg" alt="logo">
@@ -25,11 +26,13 @@
     </ul>
   </nav>
 
+  <!-- Header -->
   <header>
     <h1>Let's stay in <span class="word-color-highlight">touch</span></h1>
     <p>Drop me a line or see what I'm currently up to</p>
   </header>
 
+  <!-- Main -->
   <main>
     <!-- Contact form -->
     <form class="contact-form" onsubmit="return messageSubmit(event)">
@@ -45,8 +48,16 @@
       <button class="purple-button">Clear</button>
       <input class="purple-button" type="submit" value="Submit">
     </form>
-
   </main>
+
+   <!-- Footer -->
+   <footer>
+    <p>See what others have said</p>
+    <dl id="currentMessages">
+
+    </dl>
+   </footer>
+
 
   <script>
     function messageSubmit(event) {

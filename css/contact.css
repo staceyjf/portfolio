@@ -1,10 +1,11 @@
+/* Main */
 main {
   display: flex;
   justify-content: center;
 }
 
+/* Form */
 .contact-form {
-  width: 50vh;
   margin-top: 20px;;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -22,4 +23,20 @@ main {
   background-color: #8a1c7c;
   border-radius: 5px;
   padding: 5px;
+}
+
+/* Footer */
+footer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  background-color: #8a1c7c;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+
+footer > p {
+  text-transform: uppercase;
+  font-weight: bold;
 }

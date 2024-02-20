@@ -1,8 +1,12 @@
 body {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+/* Nav bar */
 #top-nav {
   overflow: hidden;
   display: flex;
@@ -15,6 +19,7 @@ body {
 #company-logo-container > img {
   width: 100px;
   height: auto;
+  margin-left: 10px;
 }
 
 #top-nav ul {
@@ -44,6 +49,7 @@ body {
   background-color: #f0bcd4;
 }
 
+/* Header */
 header {
   background-color: #899d78;
   padding: 20px;
@@ -53,13 +59,8 @@ header {
   text-transform: uppercase;
 }
 
-#main-header {
-  height: 100vh;
-}
-
 .word-color-highlight {
   color: #f7ece1;
   font-weight: 900;
   text-transform: uppercase;
 }
-
