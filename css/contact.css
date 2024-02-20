@@ -43,11 +43,16 @@ footer {
   font-family: "Inter", sans-serif;
 }
 
-footer > p {
+.form-title-section {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-title-section p {
   text-transform: uppercase;
   font-weight: bold;
 }
 
-dt {
+.form-wrapper dt {
   font-weight: bolder;
 }

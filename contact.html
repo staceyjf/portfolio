@@ -52,18 +52,30 @@
 
    <!-- Footer -->
    <footer>
-    <p>See what others have said</p>
-    <br>
-    <dl id="currentMessages">
-    </dl>
+    <div class="form-title-section">
+      <p>See what others have said</p>
+      <button class="purple-button" onclick="deleteMessages()">Clear Messages</button>
+    </div>
+
+    <div class="form-wrapper">
+      <dl id="currentMessages"></dl>
+    </div>
+
    </footer>
 
-
+<!-- Javascript -->
   <script>
+    function deleteMessages() {
+      if (window.sessionStorage.getItem('messages')) {
+        window.sessionStorage.removeItem('messages');
+      }
+
+      renderMessages();
+    }
+
     function messageSubmit(event) {
       event.preventDefault()
 
-      // collect form data
       const fullName = document.getElementById('fullName').value;
       const email = document.getElementById('email').value;
       const message = document.getElementById('message').value;
@@ -74,17 +86,14 @@
         message
       }
 
-      // check for existing messages
       let currentMessages = [];
 
       if (window.sessionStorage.getItem('messages')) {
         currentMessages = JSON.parse(window.sessionStorage.getItem('messages'))
       }
 
-      // add new message
       currentMessages.push(messageObject)
 
-      //update 'messages' in session storage 
       window.sessionStorage.setItem(
         'messages',
         JSON.stringify(currentMessages)
@@ -98,13 +107,12 @@
     }
 
     function clearForm() {
-      // clear the form
+      // uusing querySelector to caputure the className 
       const form = document.querySelector('.contact-form');
       form.reset();
    }
 
     function renderMessages() {
-      // check for messages in message list
       let currentMessages = [];
 
       if (window.sessionStorage.getItem('messages')) {
@@ -124,7 +132,6 @@
         listNumber++;
       })
 
-      // render message list
       let descriptList = document.getElementById('currentMessages');
       descriptList.innerHTML = listItems.join('');
     }
