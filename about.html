@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/logo_square.svg" type="image/x-icon">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/about.css">
+  <title>Learn more about me</title>
+</head>
+
+<body>
+
+  <nav class="top-nav">
+    <div class="company-logo-container">
+      <img src="/images/logo.svg" alt="logo">
+    </div>
+    <ul>
+      <li> 
+        <a href="home.html">Home</a>
+      </li>
+      <li class="active" >
+        <a href="about.html">About me</a>
+      </li>
+      <li>
+        <a href="contact.html">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Some things about <span class="word-color-highlight">Me</span></h1>
+    <p>Three fun facts about me</p>
+  </header>
+
+  <main>
+    <div class="img-wrapper">
+      <img src="/images/stacey.jpg" alt="photo of Stacey Fanner">
+    </div>
+
+    <grid-container class="facts-container">
+      <grid-item class="fact-title"> 
+        <span>I used to be in advertising</span>
+      </grid-item>
+      <grid-item>
+        <span>My background in comms planning has given me a problem-solving mindset, making me adept at researching and finding solutions in creative and efficient ways.</span>
+      </grid-item>
+
+      <grid-item class="fact-title">
+        <span>I’d loved to be known for my adaptability</span>
+      </grid-item>
+      <grid-item>
+        <span>My capacity to embrace uncertainty, my persistence and my passion for learning are fundamental aspects of my identity as a resilient developer.</span>
+      </grid-item>
+
+      <grid-item class="fact-title">
+        <span >I have a world record</span>
+      </grid-item>
+      <grid-item>
+        <span>I was part of a 5,877-strong crowd in London that set the Guinness World record for the largest coconut ensemble.</span>
+      </grid-item>
+    </grid-container>
+
+  </main>
+
+  <footer>
+    <p>Made by Stacey Fanner, <span id="currentDate"></span></p>
+  </footer>
+
+  <script>
+    // using the locale settings of the browser
+    function getTodaysDate() {
+      const currentDate = new Date();
+      const formatOptions = { month: 'short', year: 'numeric' };
+      const formattedDate = currentDate.toLocaleDateString(undefined, formatOptions);
+
+      document.getElementById('currentDate').innerHTML = formattedDate;
+
+    }
+
+  getTodaysDate()
+
+  </script>
+  
+</body>
+</html>

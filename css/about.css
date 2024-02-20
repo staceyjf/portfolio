@@ -1,0 +1,53 @@
+main {
+  display: flex;
+  margin-top: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.img-wrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.img-wrapper > img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+}
+
+.facts-container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  max-width: 1000px; 
+  grid-gap: 5px;
+  padding-right: 20px;
+}
+
+grid-item {
+  display: flex;
+  border: 1px solid #666;
+  text-align: center;
+}
+
+grid-item > span {
+  margin: auto;
+  padding: 0px 10px 0px 10px;
+}
+
+.fact-title {
+  background-color: black;
+  color: white;
+  font-weight: bolder;
+}
+
+footer {
+  margin-top: auto;
+  align-items: flex-end;
+}
+
+footer > p {
+  margin-right: 20px;
+  font-size: x-small;
+}
