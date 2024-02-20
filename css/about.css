@@ -2,10 +2,17 @@ main {
   display: flex;
   margin-top: 20px;
   font-family: "Inter", sans-serif;
+  flex: 1;
 }
 
 .img-wrapper {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.grid-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,7 +40,7 @@ grid-item {
 
 grid-item > span {
   margin: auto;
-  padding: 0px 10px 0px 10px;
+  padding: 20px;
 }
 
 .fact-title {
